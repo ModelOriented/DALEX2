@@ -3,13 +3,13 @@ Title: Descriptive mAchine Learning EXplanations
 Version: 0.9
 Authors@R: person("Przemyslaw", "Biecek", email = "przemyslaw.biecek@gmail.com", role = c("aut", "cre"))
 Description: Experimental version of the DALEX package.
-Depends: R (>= 3.0)
+Depends: R (>= 3.1)
 License: GPL
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Suggests: 
-  testthat,
-  dplyr
+    knitr,
+    testthat
 URL: https://pbiecek.github.io/DALEX2/
 BugReports: https://github.com/pbiecek/DALEX2/issues
