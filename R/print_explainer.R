@@ -4,7 +4,6 @@
 #' @param ... other parameters
 #'
 #' @export
-#' @import ggplot2
 #'
 #' @examples
 #' library("breakDown")
