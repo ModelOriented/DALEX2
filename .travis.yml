@@ -10,10 +10,11 @@ notifications:
 r_packages:
   - archivist
   - ggplot2
+  - tibble
   - breakDown
   - randomForest
   - covr
 
 after_success:
   - Rscript -e 'library(covr); codecov()'
-  
+
