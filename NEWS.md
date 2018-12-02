@@ -1,6 +1,7 @@
 DALEX2 0.9
 ----------------------------------------------------------------
 * DALEX2 forked from DALEX package. The primary goal was to reduce number of dependencies and make the architecture of the whole solution more elastic. Individual explainers are moved to separate packages while DALEX2 serves only as a factory for explainers.
+* changed names of datasets, e.g. HRTest -> HR_test ([#1](https://github.com/pbiecek/DALEX2/issues/1))
 
 DALEX 0.2.5
 ----------------------------------------------------------------

@@ -3,16 +3,16 @@
 \docType{data}
 \name{apartments}
 \alias{apartments}
-\alias{apartmentsTest}
+\alias{apartments_test}
 \title{Apartments Data}
 \format{a data frame with 1000 rows and 6 columns}
 \usage{
 data(apartments)
 }
 \description{
-Datasets \code{apartments} and \code{apartmentsTest} are artificial,
+Datasets \code{apartments} and \code{apartments_test} are artificial,
 generated form the same model.
-Structure of the dataset is copied from real dataset from \code{PBImisc} package,
+Structure of the dataset is copied from real-world dataset from \code{PBImisc} package,
 but they were generated in a way to mimic effect of Anscombe quartet for complex black box models.
 }
 \details{
