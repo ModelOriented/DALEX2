@@ -11,6 +11,7 @@ r_packages:
   - archivist
   - ggplot2
   - breakDown
+  - randomForest
   - covr
 
 after_success:
