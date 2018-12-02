@@ -2,9 +2,9 @@
 
 An experimental version of the [DALEX](https://github.com/pbiecek/DALEX) package. Expect rapid changes.
 
-[![Build Status](https://api.travis-ci.org/pbiecek/DALEX2.png)](https://travis-ci.org/pbiecek/DALEX2)
+[![Build Status](https://api.travis-ci.org/ModelOriented/DALEX2.png)](https://travis-ci.org/ModelOriented/DALEX2)
 [![Coverage
-Status](https://img.shields.io/codecov/c/github/pbiecek/DALEX2/master.svg)](https://codecov.io/github/pbiecek/DALEX2?branch=master)
+Status](https://img.shields.io/codecov/c/github/ModelOriented/DALEX2/master.svg)](https://codecov.io/github/ModelOriented/DALEX2?branch=master)
 
 ## DALEX2: Descriptive mAchine Learning EXplanations
 
