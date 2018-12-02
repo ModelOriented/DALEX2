@@ -1,7 +1,7 @@
 context("Check explain() function")
 
 test_that("Type of data in the explainer",{
-  library("dplyr")
+  library("dplyr", warn.conflicts = FALSE, quietly = TRUE)
   apartments_test_tibble <- dplyr::as_tibble(apartments_test)
   model_liniowy <- lm(m2.price ~ construction.year + surface + floor + no.rooms + district, data = apartments)
 

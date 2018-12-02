@@ -1,10 +1,11 @@
 library(randomForest)
+library(DALEX2)
 library(breakDown2)
 library(dplyr)
 
 # models
-model_classif_glm <- glm(factor(left)~., data = HR, family = "binomial")
-model_classif_rf <- randomForest::randomForest(factor(left)~., data = HR, ntree = 50)
+model_classif_glm <- glm(factor(status)~., data = HR, family = "binomial")
+model_classif_rf <- randomForest::randomForest(factor(status)~., data = HR, ntree = 50)
 model_regr_rf <- randomForest::randomForest(m2.price~., data = apartments, ntree = 50)
 model_regr_lm <- lm(m2.price~., data = apartments)
 
