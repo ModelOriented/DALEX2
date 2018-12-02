@@ -10,5 +10,5 @@ theme_mi2()
 theme object that can be added to ggplot2 plots
 }
 \description{
-MI^2 Theme
+Themem oject. In order to avoid an additional dependency from ggplot2, we have here a raw vaerion of an theme object
 }
