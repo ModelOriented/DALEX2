@@ -28,7 +28,7 @@
 #'
 #' @rdname explain
 #' @export
-#' @importFrom stats predict
+#' @importFrom stats predict model.frame
 #' @importFrom utils head tail
 #'
 #' @examples
