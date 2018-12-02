@@ -10,6 +10,7 @@ LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
     knitr,
+    randomForest,
     testthat
 URL: https://pbiecek.github.io/DALEX2/
 BugReports: https://github.com/pbiecek/DALEX2/issues
