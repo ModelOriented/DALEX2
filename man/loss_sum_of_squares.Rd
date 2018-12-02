@@ -7,6 +7,14 @@
 \usage{
 loss_sum_of_squares(observed, predicted)
 }
+\arguments{
+\item{observed}{true observed lables}
+
+\item{predicted}{scores predicted with a model}
+}
+\value{
+numeric model fit assessment. The lower - the better is the model
+}
 \description{
-Loss Functions
+Loss functions that can be used for model comparions ane feature importance estimation
 }

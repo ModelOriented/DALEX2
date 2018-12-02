@@ -32,13 +32,16 @@
 #' @importFrom utils head tail
 #'
 #' @examples
-#' library("breakDown")
+#' apartments_lm <- lm(m2.price ~ ., data = apartments)
+#' apartments_lm_ex <- explain(apartments_lm, data = apartments, label = "apartments_lm")
+#' apartments_lm_ex
 #'
+#'  \dontrun{
+#' library("breakDown2")
 #' wine_lm_model4 <- lm(quality ~ pH + residual.sugar + sulphates + alcohol, data = wine)
 #' wine_lm_explainer4 <- explain(wine_lm_model4, data = wine, label = "model_4v")
 #' wine_lm_explainer4
 #'
-#'  \dontrun{
 #' library("randomForest")
 #' wine_rf_model4 <- randomForest(quality ~ pH + residual.sugar + sulphates + alcohol, data = wine)
 #' wine_rf_explainer4 <- explain(wine_rf_model4, data = wine, label = "model_rf")
