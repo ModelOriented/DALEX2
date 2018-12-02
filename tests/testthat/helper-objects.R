@@ -1,6 +1,6 @@
 library(randomForest)
 library(DALEX2)
-library(dplyr)
+library(tibble)
 
 # models
 model_classif_glm <- glm(factor(status)~., data = HR, family = "binomial")
