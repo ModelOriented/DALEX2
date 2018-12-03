@@ -1,11 +1,12 @@
 # DALEX2 <img src="man/figures/logo.png" align="right" />
 
-An experimental version of the [DALEX](https://github.com/pbiecek/DALEX) package. Expect rapid changes.
-DALEX2 is a part of [DrWhy](https://github.com/ModelOriented/DrWhy) project. Find more infomation about explainers there.
-
 [![Build Status](https://api.travis-ci.org/ModelOriented/DALEX2.png)](https://travis-ci.org/ModelOriented/DALEX2)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/ModelOriented/DALEX2/master.svg)](https://codecov.io/github/ModelOriented/DALEX2?branch=master)
+
+DALEX2 is the new incarnation of [DALEX](https://github.com/pbiecek/DALEX) package.  Large scale code reengineering was performed to increase elasticity of the solution.
+
+Now DALEX2 is a part of [DrWhy](https://github.com/ModelOriented/DrWhy) universe for tools for Explanation, Exploration and Visualisation for Predictive Models. 
 
 ## DALEX2: Descriptive mAchine Learning EXplanations
 
@@ -20,7 +21,7 @@ From GitHub
 
 ```{r}
 # DALEX2 package
-devtools::install_github("pbiecek/DALEX2")
+devtools::install_github("ModelOriented/DALEX2")
 ```
 
 
