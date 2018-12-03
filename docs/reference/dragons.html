@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Loss Functions — loss_sum_of_squares • DALEX2</title>
+<title>Dragon Data — dragons • DALEX2</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -48,7 +48,7 @@
 	  <a class = "navbar-mi2logo" href="http://mi2.mini.pw.edu.pl/">
         <img src = "https://github.com/mi2-warsaw/MI2template/blob/master/inst/pkgdown/assets/MI2logo.jpg?raw=true" alt = "MI2" height = 46 title = "MI2">
 	  </a>
-      <a class="navbar-brand navbar-mi2" href="../index.html">Loss Functions</a>
+      <a class="navbar-brand navbar-mi2" href="../index.html">Dragon Data</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="navbar-mi2 nav navbar-nav">
@@ -79,40 +79,45 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Loss Functions</h1>
+    <h1>Dragon Data</h1>
     </div>
 
     
-    <p>Loss functions that can be used for model comparions ane feature importance estimation</p>
+    <p>Datasets <code>dragons</code> and <code>dragons_test</code> are artificial, generated form the same ground truth model, 
+but with sometimes different data distridution.</p>
     
 
-    <pre class="usage"><span class='fu'>loss_sum_of_squares</span>(<span class='no'>observed</span>, <span class='no'>predicted</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>observed</th>
-      <td><p>true observed lables</p></td>
-    </tr>
-    <tr>
-      <th>predicted</th>
-      <td><p>scores predicted with a model</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <pre class="usage"><span class='fu'>data</span>(<span class='no'>dragons</span>)</pre>
+        
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>numeric model fit assessment. The lower - the better is the model</p>
+    <p>a data frame with 2000 rows and 8 columns</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Values are generated in a way to:
+- have nonlinearity in year_of_birth and height
+- have concept drift in the test set</p>
+<ul>
+<li><p>year_of_birth - year in which the dragon was born. Negative year means year BC, eg: -1200 = 1201 BC</p></li>
+<li><p>year_of_discovery - year in which the dragon was found.</p></li>
+<li><p>height - height of the dragon in yards.</p></li>
+<li><p>weight - weight of the dragon in tons.</p></li>
+<li><p>scars - number of scars.</p></li>
+<li><p>colour - colour of the dragon.</p></li>
+<li><p>number_of_lost_teeth - number of teeth that the dragon lost.</p></li>
+<li><p>life_length - life length of the dragon.</p></li>
+</ul>
     
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#value">Value</a></li>
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#details">Details</a></li>
           </ul>
 
   </div>
