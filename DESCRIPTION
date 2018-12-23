@@ -1,7 +1,11 @@
 Package: DALEX2
 Title: Descriptive mAchine Learning EXplanations
 Version: 0.9
-Authors@R: person("Przemyslaw", "Biecek", email = "przemyslaw.biecek@gmail.com", role = c("aut", "cre"))
+Authors@R: c(
+  person("Przemyslaw", "Biecek", 
+          email = "przemyslaw.biecek@gmail.com", role = c("aut", "cre")),
+  person("Agnieszka", "Ciepielewska", 
+          role = "ctb"))
 Description: Machine Learning models are widely used and have various applications in classification or regression tasks. 
     Due to increasing computational power, availability of new data sources and new methods, ML models are more and more complex. 
     Models created with techniques like boosting, bagging of neural networks are true black boxes. 
@@ -9,7 +13,7 @@ Description: Machine Learning models are widely used and have various applicatio
     They are used because of high performance, but lack of interpretability is one of their weakest sides.
     In many applications we need to know, understand or prove how input variables are used in the model and what impact do they have on final model prediction. 
     'DALEX2' is a collection of tools that help to understand how complex predictive models are working.
-    'DALEX2' is a part of 'DrWhy' universe for tools for Explanation, Exploration and Visualisation for Predictive Models.
+    'DALEX2' is a part of 'DrWhy' universe: tools for Explanation, Exploration and Visualisation for Predictive Models.
 Depends: R (>= 3.1)
 License: GPL
 Encoding: UTF-8
