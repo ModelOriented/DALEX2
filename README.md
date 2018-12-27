@@ -1,5 +1,6 @@
 # DALEX2 <img src="man/figures/logo.png" align="right" />
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/DALEX2)](https://cran.r-project.org/package=DALEX2)
 [![Build Status](https://api.travis-ci.org/ModelOriented/DALEX2.png)](https://travis-ci.org/ModelOriented/DALEX2)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/ModelOriented/DALEX2/master.svg)](https://codecov.io/github/ModelOriented/DALEX2?branch=master)
