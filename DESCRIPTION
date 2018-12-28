@@ -3,7 +3,8 @@ Title: Descriptive mAchine Learning EXplanations
 Version: 0.9
 Authors@R: c(
   person("Przemyslaw", "Biecek", 
-          email = "przemyslaw.biecek@gmail.com", role = c("aut", "cre")),
+          email = "przemyslaw.biecek@gmail.com", role = c("aut", "cre"),
+          comment = c(ORCID = "0000-0001-8423-1823")),
   person("Agnieszka", "Ciepielewska", 
           role = "ctb"))
 Description: Machine Learning models are widely used and have various applications in classification or regression tasks. 
