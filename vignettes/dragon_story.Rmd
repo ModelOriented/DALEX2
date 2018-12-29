@@ -1,0 +1,25 @@
+---
+title: "Dragon story"
+author: "Agnieszka Ciepielewska"
+date: "`r Sys.Date()`"
+output: pdf_document
+vignette: >
+  %\VignetteEngine{knitr::knitr}
+  %\VignetteIndexEntry{Dragon story}
+  %\usepackage[UTF-8]{inputenc}
+---
+
+\section*{Story behind the data}
+
+Once upon a time, there lived mighty dragons. With large teeth and strong jaws, they were a threat to all other species. Since the 18$^{\mathrm{th}}$ century archaeologists were discovering bones of those creatures. Based on their remains, they knew quite a lot about them. It was easy to measure the dragon's height and approximate weight. They also knew how many scars they'd had or how many teeth they'd lost. The remains of the scales gave information about the colour of the dragon. Based on $^{14}$C dating they could even tell when the dragon was born. But they wanted to know how long the dragon lived, which was a bit problematic. Luckily, in the old records, the date of death for several dragons could be found.
+
+Each variable influences the target in a different way (fig. 1). Both scars and the number of lost teeth have a linear relation to the life length. The older the dragon was the more scars and fewer teeth he had. Due to heroic quests accomplished by knights, the dragons born in the middle ages lived much shorter than in other periods. As for height, the relation is more complicated. The smallest dragons were quite good at hiding themselves and therefore could live longer. Similarly, the largest dragons were difficult to kill because of their size and power. Overall the relation between height and length of life is quadratic. There is, however, one more interesting catch regarding dragons height. Around 1840 people discovered a new island and found a new breed of dragon. The exceptionally large black dragon, which lived ages because of no natural enemies. The relation stays the same, but the distribution of the height of the dragons is shifted.
+
+Long live the dragons!
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{dragons_diagram.pdf}
+\caption{Diagram of relations between the variables}
+\label{fig:diagram}
+\end{figure}
