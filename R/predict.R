@@ -25,6 +25,17 @@ yhat.lm <- function(X.model, newdata, ...) {
 
 #' @rdname yhat
 #' @export
+yhat.svm <- function(X.model, newdata, ...) {
+  if (X.model$type == 0) {
+    attr(predict(X.model, newdata = newdata, probability = TRUE), "probabilities")
+  } else {
+    predict(X.model, newdata, ...)
+  }
+}
+
+
+#' @rdname yhat
+#' @export
 yhat.randomForest <- function(X.model, newdata, ...) {
   if (X.model$type == "classification") {
     predict(X.model, newdata, type = "prob", ...)
