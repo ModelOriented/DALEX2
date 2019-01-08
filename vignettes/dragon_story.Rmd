@@ -65,17 +65,25 @@ life_length <- true_model(NULL, data.frame(year_of_birth, height, weight,
 dragons_test <- data.frame(year_of_birth, height, weight, scars, colour,
                            year_of_discovery, number_of_lost_teeth, life_length)
 ```
-```{r echo=FALSE, results='hide', message=FALSE}
-library(DALEX2)
-```
 
 Head of the data:
+```{r echo=FALSE, results='hide', message=FALSE}
+library("DALEX2")
+```
 ```{r echo=FALSE}
 head(dragons)
 ```
 
 Example model on the data:
 ```{r message=FALSE}
-library(randomForest)
-randomForest(life_length ~ ., data=dragons)
+library("randomForest")
+rf_model <- randomForest(life_length ~ ., data = dragons)
+rf_model
+```
+
+Explainer for the model:
+```{r message=FALSE}
+rf_explain <- explain(rf_model, data = dragons, 
+                      y = dragons$life_length, label = "RF")
+rf_explain
 ```
