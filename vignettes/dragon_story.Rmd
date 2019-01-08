@@ -2,7 +2,7 @@
 title: "Dragon story"
 author: "Agnieszka Ciepielewska"
 date: "`r Sys.Date()`"
-output: pdf_document
+output: html_document
 vignette: >
   %\VignetteEngine{knitr::knitr}
   %\VignetteIndexEntry{Dragon story}
@@ -17,9 +17,65 @@ Each variable influences the target in a different way (fig. 1). Both scars and 
 
 Long live the dragons!
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\textwidth]{dragons_diagram.pdf}
-\caption{Diagram of relations between the variables}
-\label{fig:diagram}
-\end{figure}
+<p style="text-align:center;"><img src="dragons_diagram.svg" alt="diagram"><br><br>Figure 1: Diagram of relations between the variables</p>
+
+
+\section*{Generating data}
+
+The data is generated with following code:
+```{r eval=FALSE}
+true_model <- function(model, data){
+  return(abs(500 + 100 * (abs(data$year_of_birth - 1000) > 500) +
+               0.02 * (data$height - 50)^2 + 40 * data$scars + 20 * data$number_of_lost_teeth))
+}
+
+N <- 2000
+set.seed(756)
+
+year_of_birth <- round(runif(N, -2000, 1800)) # year, for negative -n = n + 1 BC
+year_of_discovery <- sort(round(runif(N, 1700, 1800))) # year
+height <- rgamma(N, 50) # yards
+weight <- 1/4 * height + rexp(N, 1) # tons
+scars <- round(rexp(N, 0.1)) # number
+number_of_lost_teeth <- round(runif(N, 0, 40)) # number
+colour <- sample(c('red', 'blue', 'green', 'black'), N, replace=TRUE, p=c(0.5, 0.3, 0.18, 0.02))
+life_length <- true_model(NULL, data.frame(year_of_birth, height, weight,
+                                           scars, colour, year_of_discovery,
+                                           number_of_lost_teeth)) + rnorm(N, 0, 20)
+dragons <- data.frame(year_of_birth, height, weight, scars, colour,
+                 year_of_discovery, number_of_lost_teeth, life_length)
+
+N <- 1000
+set.seed(1)
+
+year_of_birth <- round(runif(N, -2000, 2000)) # year, for negative -n = n + 1 BC
+year_of_discovery <- sort(round(runif(N, 1800, 2000))) # year
+colour <- sample(c('red', 'blue', 'green', 'black'), N, replace=TRUE, p=c(0.4, 0.3, 0.1, 0.2))
+height <- ifelse(
+  colour == 'black' & year_of_discovery > 1840,
+  rgamma(N, 200),
+  rgamma(N, 50)
+) # yards
+weight <- 1/4 * height + rexp(N, 1) # tons
+scars <- round(rexp(N, 0.1)) # number
+number_of_lost_teeth <- round(runif(N, 0, 40)) # number
+life_length <- true_model(NULL, data.frame(year_of_birth, height, weight,
+                                           scars, colour, year_of_discovery,
+                                           number_of_lost_teeth)) + rnorm(N, 0, 20)
+dragons_test <- data.frame(year_of_birth, height, weight, scars, colour,
+                           year_of_discovery, number_of_lost_teeth, life_length)
+```
+```{r echo=FALSE, results='hide', message=FALSE}
+library(DALEX2)
+```
+
+Head of the data:
+```{r echo=FALSE}
+head(dragons)
+```
+
+Example model on the data:
+```{r message=FALSE}
+library(randomForest)
+randomForest(life_length ~ ., data=dragons)
+```
